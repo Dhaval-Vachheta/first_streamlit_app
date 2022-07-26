@@ -1,5 +1,6 @@
-# Import Library
+# Import Libraries
 import streamlit
+import pandas as pd
 
 # Title
 streamlit.title('My Parents New Healthy Dinner')
@@ -17,3 +18,9 @@ streamlit.text('Avocado Toast')
 
 # Your Own Fruit Header
 streamlit.header('Build Your Own Fruit Smoothie')
+
+# Load CSV Data Into Variable
+my_fruits_list = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
+
+# Data
+streamlit.dataframe(my_fruits_list)
