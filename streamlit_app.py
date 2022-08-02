@@ -43,7 +43,7 @@ streamlit.write('The user entered ', fruit_choice)
 import requests
 
 # Fruityvice Response
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 # Returns normalized data with columns prefixed with the given string.
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
