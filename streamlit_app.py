@@ -67,7 +67,6 @@ streamlit.stop()
 
 # Header
 streamlit.header("The fruit load list contains:")
-
 # Snowflake Related Function
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
